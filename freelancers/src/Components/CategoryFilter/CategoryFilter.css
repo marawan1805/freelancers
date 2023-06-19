@@ -1,0 +1,57 @@
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.category-filter-container {
+  overflow-x: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.category-filter-scroll {
+  display: flex;
+  position: relative;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.category-filter-button {
+  height: 40px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: #333;
+  border: 2px solid #333;
+  cursor: pointer;
+  background: transparent;
+  background-image: url("https://web.archive.org/web/20160312144920im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871");
+  background-repeat: repeat-x;
+  background-position: 0 -100%;
+  transition: 1s ease;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Arial", sans-serif;
+}
+
+.category-filter-button:hover {
+  background-position: center;
+}
+
+.category-filter-button-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.category-filter-button.selected {
+  background-position: center;
+  background-color: #9900ff;
+}
+
+.category-filter-button:nth-child(n) {
+  filter: hue-rotate(30deg) saturate(60%) brightness(150%);
+}
