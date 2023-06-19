@@ -23,14 +23,15 @@ const categories = [
   "Photography",
   "Event Planning",
   "Legal Services",
-  "Cybersecurity"
+  "Cybersecurity",
 ];
 
 const CategoryFilter = () => {
   const { selectedCategory, setSelectedCategory } = useContext(SearchContext);
   const containerRef = useRef(null);
   const [scrollOffset, setScrollOffset] = useState(0);
-  
+
+  // handling scrolling of the category filter container
   useEffect(() => {
     const container = containerRef.current;
     container.addEventListener("scroll", handleScroll);
@@ -54,21 +55,25 @@ const CategoryFilter = () => {
     }
   };
 
+  // rendering rows in the table that match the selected category
   const renderCategories = () => {
-    return categories.map(category => (
+    return categories.map((category) => (
       <div key={category} className="category-filter-button-container">
         <button
-          className={`category-filter-button ${category === selectedCategory ? "selected" : ""}`}
-          onClick={() => {selectedCategory === category?setSelectedCategory('All'): setSelectedCategory(category)
-            
-        }}
+          className={`category-filter-button ${
+            category === selectedCategory ? "selected" : ""
+          }`}
+          onClick={() => {
+            selectedCategory === category
+              ? setSelectedCategory("All")
+              : setSelectedCategory(category);
+          }}
         >
           {category}
         </button>
       </div>
     ));
   };
-  
 
   return (
     <div className="category-filter-container">

@@ -1,0 +1,29 @@
+service: freelancers-service
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: eu-central-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Scan
+      Resource: "arn:aws:dynamodb:eu-central-1:698091787503:table/Freelancers"
+
+functions:
+  getFreelancers:
+    handler: handler.get_freelancers
+    events:
+      - http:
+          path: freelancers
+          method: get
+          cors: true
+
+  searchFreelancers:
+    handler: handler.search_freelancers
+    events:
+      - http:
+          path: freelancers/search
+          method: get
+          cors: true

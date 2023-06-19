@@ -6,6 +6,7 @@ import "./HamburgerMenu.css";
 export const HamburgerMenu = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
+  // here we are using the Drawer component from Material UI
   return (
     <div className="hamburger-menu-container">
       <IconButton

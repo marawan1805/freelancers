@@ -17,6 +17,7 @@
   will-change: transform;
 }
 
+/* fluid effect for the category filter buttons */
 .category-filter-button {
   height: 40px;
   padding: 10px;

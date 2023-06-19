@@ -1,10 +1,10 @@
 .freelancer-grid-container {
-    height: 700px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    padding: 20px;
+  height: 700px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 20px;
 }

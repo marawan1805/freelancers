@@ -14,8 +14,14 @@ const columns = [
 ];
 
 const FreelancersGrid = () => {
+  // using fetched data from the SearchContext
   const { rows, selectedCategory } = useContext(SearchContext);
-  const filteredRows = selectedCategory !== 'All' ? rows.filter(row => row.skill === selectedCategory) : rows;
+
+  // filtering rows based on the selected category
+  const filteredRows =
+    selectedCategory !== "All"
+      ? rows.filter((row) => row.skill === selectedCategory)
+      : rows;
 
   return (
     <div className="freelancer-grid-container">
@@ -24,6 +30,5 @@ const FreelancersGrid = () => {
     </div>
   );
 };
-
 
 export default FreelancersGrid;

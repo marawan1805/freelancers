@@ -5,9 +5,10 @@ export const SearchContext = createContext();
 export const SearchProvider = ({ children }) => {
   const [rows, setRows] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState('All'); 
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
+    // fetching data from the API, updating the rows state
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -35,7 +36,15 @@ export const SearchProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <SearchContext.Provider value={{ rows, searchTerm, setSearchTerm, selectedCategory, setSelectedCategory }}>
+    <SearchContext.Provider
+      value={{
+        rows,
+        searchTerm,
+        setSearchTerm,
+        selectedCategory,
+        setSelectedCategory,
+      }}
+    >
       {children}
     </SearchContext.Provider>
   );
