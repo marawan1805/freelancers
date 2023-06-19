@@ -26,7 +26,7 @@ const FreelancersGrid = () => {
   return (
     <div className="freelancer-grid-container">
       <CategoryFilter />
-      <DataGrid rows={filteredRows} columns={columns} pageSize={5} />
+      <DataGrid className="data-grid-container" rows={filteredRows} columns={columns} pageSize={5} />
     </div>
   );
 };

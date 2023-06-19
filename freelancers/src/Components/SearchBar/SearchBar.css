@@ -19,3 +19,9 @@
 .search-box input:focus {
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .search-box {
+    width: 90%;
+  }
+}
