@@ -36,7 +36,7 @@ def search_freelancers(event, context):
         search_term = query_params.get('search')
 
         # Defining attributes to search in
-        search_attributes = ['first_name', 'last_name', 'email', 'skill', 'social_media_followers']
+        search_attributes = ['id','first_name', 'last_name', 'email', 'skill', 'social_media_followers']
 
         # Building the filter expression
         filter_expression = None
